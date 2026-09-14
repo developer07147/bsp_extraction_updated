@@ -12,6 +12,7 @@ app.secret_key = "bsp_secret_key"
 app.config["UPLOAD_FOLDER"] = "uploads"
 app.config["OUTPUT_FOLDER"] = "outputs"
 app.config["ALLOWED_EXTENSIONS"] = {"pdf"}
+app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024  # 16 MB per uploaded PDF
 
 os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 os.makedirs(app.config["OUTPUT_FOLDER"], exist_ok=True)
